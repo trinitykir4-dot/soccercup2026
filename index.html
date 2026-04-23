@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Soccer Cup 2026 — Concept Moodboard</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --surface: #13161d;
+    --surface-2: #1a1e28;
+    --text: #e8ecf4;
+    --text-dim: #9aa3b2;
+    --accent: #ff4757;
+    --gold: #f5c542;
+    --emerald: #16a34a;
+    --crimson: #b91c1c;
+    --purple: #7c3aed;
+    --cyan: #22d3ee;
+    --border: #2a3040;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 48px 32px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 32px; margin-bottom: 56px; }
+  .eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 12px; }
+  h1 { font-size: 44px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
+  h1 span { color: var(--accent); }
+  .subtitle { color: var(--text-dim); font-size: 17px; max-width: 820px; }
+  .meta-row { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; font-size: 13px; color: var(--text-dim); }
+  .meta-row span { padding: 6px 12px; background: var(--surface); border-radius: 6px; border: 1px solid var(--border); }
+
+  section { margin-bottom: 72px; }
+  h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; }
+  h2 .num { display: inline-block; width: 36px; height: 36px; line-height: 34px; text-align: center; background: var(--accent); color: white; border-radius: 50%; font-size: 15px; margin-right: 14px; vertical-align: middle; }
+  .section-lead { color: var(--text-dim); font-size: 16px; max-width: 820px; margin-bottom: 32px; }
+
+  .angle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .angle { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .angle .tag { display: inline-block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+  .angle h3 { font-size: 17px; margin-bottom: 8px; font-weight: 700; }
+  .angle .problem { color: var(--text-dim); font-size: 13px; margin-bottom: 14px; }
+  .angle .solution { font-size: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .angle .solution strong { color: var(--gold); }
+
+  .brand-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .brand-badge { padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .badge-ml { background: linear-gradient(135deg, #f5c542, #16a34a); color: #0b0d12; }
+  .badge-hm { background: linear-gradient(135deg, #fbbf24, #ef4444); color: #0b0d12; }
+  .badge-sb { background: linear-gradient(135deg, #1d4ed8, #f472b6); color: white; }
+  .badge-pf { background: linear-gradient(135deg, #4c1d95, #22d3ee); color: white; }
+
+  .hero-lockup { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; align-items: start; }
+  .hero-lockup img { width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); background: #000; }
+  .hero-rationale { padding-top: 8px; }
+  .hero-rationale h3 { font-size: 18px; margin-bottom: 10px; }
+  .hero-rationale p { color: var(--text-dim); margin-bottom: 16px; font-size: 15px; }
+  .hero-rationale ul { margin: 8px 0 16px 18px; color: var(--text-dim); font-size: 14px; }
+  .hero-rationale ul li { margin-bottom: 6px; }
+  .hero-rationale ul li strong { color: var(--gold); }
+
+  .diff-matrix { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 28px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--surface-2); font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); }
+  tr:last-child td { border-bottom: none; }
+  td.brand-col { font-weight: 700; white-space: nowrap; }
+  td .dna { color: var(--text-dim); font-size: 13px; display: block; margin-top: 4px; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+
+  .four-up { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .lockup { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .lockup img { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+  .lockup .caption { padding: 14px 18px; font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--border); }
+  .lockup .caption strong { color: var(--text); display: block; margin-bottom: 3px; }
+
+  .callout { background: linear-gradient(135deg, rgba(245,197,66,0.08), rgba(22,163,74,0.08)); border: 1px solid rgba(245,197,66,0.25); border-radius: 12px; padding: 24px; }
+  .callout strong { color: var(--gold); }
+
+  .note { background: var(--surface); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 6px; font-size: 14px; color: var(--text-dim); margin-top: 20px; }
+  .note strong { color: var(--text); }
+
+  /* Variations archive styles */
+  .variations-intro { color: var(--text-dim); font-size: 15px; max-width: 820px; margin-bottom: 40px; font-style: italic; }
+  .variations-brand { margin-bottom: 40px; }
+  .variations-brand-title { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .variations-brand-title h3 { font-size: 15px; font-weight: 700; color: var(--text); margin: 0; }
+  .variations-brand-title .count { font-size: 12px; color: var(--text-dim); }
+  .variations-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .variation { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .variation img { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+  .variation .v-caption { padding: 8px 10px 10px; font-size: 11px; color: var(--text-dim); border-top: 1px solid var(--border); line-height: 1.3; }
+  .variation .v-caption strong { color: var(--text); display: block; font-size: 12px; margin-bottom: 2px; }
+
+  @media (max-width: 900px) {
+    .angle-grid, .four-up { grid-template-columns: 1fr; }
+    .hero-lockup { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="eyebrow">Internal concept preview · Kick-off follow-up</div>
+  <h1>Soccer Cup 2026 — Concept <span>Moodboard</span></h1>
+  <p class="subtitle">Overarching theme <strong style="color:#fff">soccer + USA</strong>, one per brand, with each brand's collectible concept as called out in the kick-off summary: ML card collectible with golden-card mystery, HM penalty shootout, PF jersey collection, SB hero character collecting soccer kit. This moodboard is a rough first pass on the three open questions — (1) cards that don't read as a referee warning, (2) a Golden item that lands richly, (3) differentiation across all four brands — not a proposal, just a starting point to react to.</p>
+  <div class="meta-row">
+    <span>Concepts proposed: Thu 30 Apr</span>
+    <span>Style freeze: Fri 1 May</span>
+    <span>Live: 11 Jun → 19 Jul</span>
+    <span>Legal: no official assets · country colors OK</span>
+  </div>
+</header>
+
+<!-- THREE ANGLES -->
+<section>
+  <h2><span class="num">1</span>Three angles to close</h2>
+  <p class="section-lead">Raised but unresolved in today's meeting. The concept below is built around solving all three in a single visual language.</p>
+
+  <div class="angle-grid">
+    <div class="angle">
+      <div class="tag">Anna's concern</div>
+      <h3>"Card" reads as warning</h3>
+      <p class="problem">In a soccer context, a flat rectangular colored card reads as yellow/red — a referee warning. Risk of negative association for a positive collectible.</p>
+      <div class="solution"><strong>Solution:</strong> treat cards as <em>premium Panini-style trading cards</em> — ornate gold borders, illustrated subjects, holofoil edges, displayed in a vault. Visually distant from any warning-card silhouette.</div>
+    </div>
+    <div class="angle">
+      <div class="tag">Noel's concern</div>
+      <h3>Golden Card must feel rich</h3>
+      <p class="problem">Laying flat card rectangles on screen reads like a loyalty punch-card, not a rewarding collectible moment. Must feel valuable.</p>
+      <div class="solution"><strong>Solution:</strong> fanned spread on a luxurious velvet backdrop, with the Golden Card radiating holofoil bloom at the centerpiece. Layout works regardless of completion order.</div>
+    </div>
+    <div class="angle">
+      <div class="tag">Alison's concern</div>
+      <h3>Differentiation across 4 brands</h3>
+      <p class="problem">Same campaign, same legal constraints, but each brand must read as its own product, not a recolor.</p>
+      <div class="solution"><strong>Solution:</strong> one theme, four distinct visual DNAs (see matrix). Collectible mechanic changes per brand — cards / penalty goal / eagle kit / jersey locker.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MCLUCK PRIMARY -->
+<section>
+  <div class="brand-header">
+    <h2><span class="num">2</span>McLuck — primary concept</h2>
+    <span class="brand-badge badge-ml">ML · Lucky Cards</span>
+  </div>
+  <p class="section-lead">Primary focus of this moodboard. Same mechanic as Alison's <em>Stamp Card Collectible Quest</em>, reframed visually as a premium trading-card vault. Directly closes Angles 1 + 2.</p>
+
+  <div class="hero-lockup">
+    <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/44f01931-5232-4076-bde9-bc7399ea85e9.png" alt="McLuck Lucky Cards lockup">
+    <div class="hero-rationale">
+      <h3>Why this reads as premium, not a warning</h3>
+      <p>Six ornate cards displayed as a 2×3 grid inside a glass-cube vitrine on a pedestal — echoing the McLuck <em>Piece of Cake</em> layout. Each card carries a distinct soccer-moment illustration; the Golden Card (top-center) has a trophy as its subject, gold background, holofoil shimmer. Ornate gold filigree borders + illustrated content kill any referee-card association.</p>
+      <ul>
+        <li><strong>Angle 1 closed:</strong> framed ornate Panini-style collectibles with illustrated subjects ≠ a flat warning card. The silhouette reads as trading card, not referee card.</li>
+        <li><strong>Angle 2 closed:</strong> Golden Card sits at the fixed top-center slot of the 2×3 grid regardless of which mission is completed last — spatial anchor, not sequence-based reveal.</li>
+        <li><strong>6 collectibles rule:</strong> 5 soccer-moment cards (kick, save, stadium, header, ball in motion) + 1 Golden trophy card = the set. Clear narrative: playing moments → trophy reveal.</li>
+        <li><strong>Brand DNA locked:</strong> gold + emerald green + deep crimson palette, sparkles, glossy 3D render — matches the <code>ML style</code> reference.</li>
+        <li><strong>Legally clean:</strong> generic silhouettes only, no real players, no FIFA/World Cup branding, no real trophy design.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>How to read this image.</strong> Concept lockup showing full composition — banner (extending above the colored background into the transparent area, per the <em>Piece of Cake</em> pattern), Ultimate Reward plaque, hero scene with 6 cards inside the glass cube, CTA button and timer (extending below the background). In production each of those elements becomes a real brand component; the AI-rendered text/icons are placeholder. The cards themselves — 2×3 grid inside the vitrine, Golden Card at top-center with a trophy illustration — are the custom hero asset. CTA name: <strong>COLLECT</strong> (kept distinct from SCORE / SUIT UP / KICK OFF on other brands).
+  </div>
+</section>
+
+<!-- DIFFERENTIATION MATRIX -->
+<section>
+  <h2><span class="num">3</span>Four-brand differentiation</h2>
+  <p class="section-lead">Same theme (Soccer Cup 2026), same legal constraints, four distinct visual worlds. Matrix summarizes the rule of each brand, followed by the hero scene for each.</p>
+
+  <div class="diff-matrix">
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Visual DNA</th>
+          <th>Collectible format</th>
+          <th>Hero object</th>
+          <th>Quest name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #f5c542;"></span>McLuck<span class="dna">ml style</span></td>
+          <td>3D stylized, gold + emerald + crimson, glossy, sparkles, opulent "lucky" feel<span class="dna">Panini-vault aesthetic</span></td>
+          <td>6 trading cards, fanned<span class="dna">Golden Card centerpiece</span></td>
+          <td>6 cards with generic soccer silhouettes</td>
+          <td>Lucky Cards</td>
+        </tr>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #ef4444;"></span>HelloMillions<span class="dna">hm logo style</span></td>
+          <td>Pop-art comic, Ben-Day halftone dots, thick black outlines, primary colors, starbursts<span class="dna">Retro mid-century comic</span></td>
+          <td>Goal with 6 X-markers<span class="dna">Center Golden X is the winning goal</span></td>
+          <td>Penalty shootout — adult goalkeeper + ball + goal</td>
+          <td>Penalty Shootout</td>
+        </tr>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #7c3aed;"></span>SpinBlitz<span class="dna">sb style</span></td>
+          <td>Neon speed, blue/purple/pink gradient, Pixar-style characters, gold coins, electric bolts<span class="dna">"Big win" high-energy</span></td>
+          <td>6 kit pieces collected by hero<span class="dna">Boots, jersey, shorts, socks, armband + Golden match ball</span></td>
+          <td>Eagle mascot assembles the captain look</td>
+          <td>Captain's Quest</td>
+        </tr>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #ec4899;"></span>PlayFame<span class="dna">playfame style</span></td>
+          <td>Deep indigo purple + cyan/magenta neon, gold metallic highlights, volumetric light rays, bloom<span class="dna">Premium neon lounge</span></td>
+          <td>Jerseys in lit locker grid<span class="dna">Count flexible (5 per Alison's e.g., shown here as 6); top-center jersey is Golden #10</span></td>
+          <td>Champions lineup — USA-focus or country mix (USA, Mex, Can, Bra, Arg) TBD</td>
+          <td>Champions Lineup</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="four-up">
+    <div class="lockup">
+      <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/44f01931-5232-4076-bde9-bc7399ea85e9.png" alt="McLuck lockup">
+      <div class="caption"><strong>McLuck</strong>Lucky Cards · 6 cards · CTA: COLLECT</div>
+    </div>
+    <div class="lockup">
+      <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/251b9f7c-0e12-40ff-b774-c3f6fa1477b6.png" alt="HM lockup">
+      <div class="caption"><strong>HelloMillions</strong>Penalty Shootout · 6 red X + Golden X · CTA: SCORE</div>
+    </div>
+    <div class="lockup">
+      <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/f5e1a706-057a-4fc1-91c1-7000109d75b2.png" alt="SpinBlitz lockup">
+      <div class="caption"><strong>SpinBlitz</strong>Captain's Quest · eagle + 6 kit pieces · CTA: SUIT UP</div>
+    </div>
+    <div class="lockup">
+      <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/0c58a7b0-d6c9-426a-93a4-f1637fdfec8f.png" alt="PlayFame lockup">
+      <div class="caption"><strong>PlayFame</strong>Champions Lineup · 6 jerseys · CTA: KICK OFF</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>6 collectibles suggested per brand</strong> (count is a starting point, open to match Alison's 5-jersey example or strategy constraints). McLuck: 6 soccer-moment cards, Golden trophy card top-center. HelloMillions: 6 red X targets inside the goal + 1 small Golden X on the pitch at the keeper's feet as the premium marker. SpinBlitz: eagle hero + 6 kit pieces (boots, jersey, shorts, socks, armband + Golden match ball). PlayFame: country-color jerseys, Golden #10 as the champion's jersey. Golden item anchored to a fixed compositional slot so completion order doesn't break the layout. CTAs intentionally distinct per brand — COLLECT / SCORE / SUIT UP / KICK OFF.
+  </div>
+</section>
+
+<!-- GOLDEN ITEM PLACEMENT -->
+<section>
+  <h2><span class="num">4</span>Golden-item placement principle</h2>
+  <p class="section-lead">Works for McLuck Golden Card, PlayFame Golden Jersey, and any "premium variant" asset added later.</p>
+
+  <div class="callout">
+    <strong>Rule:</strong> the golden item has a <em>compositional slot</em>, not a sequential slot. Across brands — McLuck cards, HelloMillions X-markers, SpinBlitz kit pieces, PlayFame jerseys — one slot is reserved for the Golden variant (top-center card, center X, golden match ball, top-center jersey). All slots are visible from the start as locked silhouettes. The player unlocks them in any order — Golden lives at a fixed spatial anchor, so it always lands heroically regardless of which mission completes last. This addresses the constraint raised in the kick-off: quests can be completed in any order, so sequential "reveal last" logic is unsafe. Spatial anchoring is safe.
+  </div>
+</section>
+
+<!-- VARIATIONS ARCHIVE -->
+<section>
+  <h2><span class="num">5</span>Other variations — reference archive</h2>
+  <p class="variations-intro">Rough exploration that didn't make the main picks above. Not proposals, just stuff that came out of the AI along the way — maybe some compositions, framings, or colour ideas worth pulling from. Keeping it all in one place in case any of it sparks something for the concept work next week.</p>
+
+  <div class="variations-brand">
+    <div class="variations-brand-title">
+      <span class="brand-badge badge-ml">McLuck</span>
+      <h3>Lucky Cards — early explorations</h3>
+      <span class="count">6 variations</span>
+    </div>
+    <div class="variations-grid">
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/aeae31f4-6cca-4f1c-8919-9fe4fc8ce5c4.png" alt="ML A">
+        <div class="v-caption"><strong>A</strong>first pass · fanned 5-card spread in vitrine</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/ecedf587-6a84-42a0-8434-a49beb1c03fd.png" alt="ML B">
+        <div class="v-caption"><strong>B</strong>alt framing, same concept</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/04a5f066-2bb2-4f19-97f3-f35f74071de1.png" alt="ML C">
+        <div class="v-caption"><strong>C</strong>clean hero only (no UI chrome)</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/559e724e-1396-4d86-ae1a-f5351706bbfc.png" alt="ML D">
+        <div class="v-caption"><strong>D</strong>first 6-card grid with full UI</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/44f01931-5232-4076-bde9-bc7399ea85e9.png" alt="ML E">
+        <div class="v-caption"><strong>E · current main</strong>layout fixes applied</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/46fd38f8-ea12-4554-9319-93e21fd5de63.png" alt="ML F">
+        <div class="v-caption"><strong>F</strong>ball-in-D banner attempt (skipped)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="variations-brand">
+    <div class="variations-brand-title">
+      <span class="brand-badge badge-hm">HelloMillions</span>
+      <h3>Penalty Shootout — early explorations</h3>
+      <span class="count">6 variations</span>
+    </div>
+    <div class="variations-grid">
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/8cf71a2c-9d79-46d8-913b-29dd6358d06c.png" alt="HM A">
+        <div class="v-caption"><strong>A</strong>first pass · 5 X grid, young-looking keeper</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/79e3343f-71bc-482b-8ba9-71ebf469fcd5.png" alt="HM B">
+        <div class="v-caption"><strong>B</strong>alt framing, heavier comic burst</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/890f1621-9f25-4fb3-8876-e201f7db4c39.png" alt="HM C">
+        <div class="v-caption"><strong>C</strong>clean hero only (no UI chrome)</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/cae08357-b0e8-4545-82ad-cee2b81bd79f.png" alt="HM D">
+        <div class="v-caption"><strong>D</strong>6 X + full UI, first pass</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/251b9f7c-0e12-40ff-b774-c3f6fa1477b6.png" alt="HM E">
+        <div class="v-caption"><strong>E · current main</strong>layout fixes + adult keeper</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/c0389390-d79c-42f2-a454-faf6dd57e01e.png" alt="HM F">
+        <div class="v-caption"><strong>F</strong>6 X + stadium re-attempt (skipped)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="variations-brand">
+    <div class="variations-brand-title">
+      <span class="brand-badge badge-sb">SpinBlitz</span>
+      <h3>Captain's Quest — early explorations</h3>
+      <span class="count">7 variations</span>
+    </div>
+    <div class="variations-grid">
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/d91426a7-e5f3-492a-8a8e-63cddd957067.png" alt="SB A">
+        <div class="v-caption"><strong>A</strong>first pass · eagle + ghost progression</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/c9d9689c-e49f-405f-a9e4-8e281ddf8699.png" alt="SB B">
+        <div class="v-caption"><strong>B</strong>alt pose, tighter neon energy</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/15d0d7d0-cd7d-4ee4-9cf7-266604ca20d3.png" alt="SB C">
+        <div class="v-caption"><strong>C</strong>clean hero only (no UI chrome)</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/f7055edd-a774-4c16-afea-950da6d91aef.png" alt="SB D">
+        <div class="v-caption"><strong>D</strong>6-stage eagle evolution (pre-align)</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/05c14cb8-74ef-4785-b4ff-10dbdb9eb513.png" alt="SB E">
+        <div class="v-caption"><strong>E</strong>first kit-collection pass (Alison-aligned)</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/f5e1a706-057a-4fc1-91c1-7000109d75b2.png" alt="SB F">
+        <div class="v-caption"><strong>F · current main</strong>capsule display + layout fixes</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/14fe6fe6-692f-4376-93f3-b8f2fcdbcc4c.png" alt="SB G">
+        <div class="v-caption"><strong>G</strong>stadium + ball-in-Q re-attempt (skipped)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="variations-brand">
+    <div class="variations-brand-title">
+      <span class="brand-badge badge-pf">PlayFame</span>
+      <h3>Champions Lineup — early explorations</h3>
+      <span class="count">6 variations</span>
+    </div>
+    <div class="variations-grid">
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/d7ad0791-cded-4437-9f41-a039379cbed2.png" alt="PF A">
+        <div class="v-caption"><strong>A</strong>first pass · 5 jersey locker row</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/3760c1e2-d08f-4de7-a2be-eb0bc9765ccb.png" alt="PF B">
+        <div class="v-caption"><strong>B</strong>tighter crop, more bloom</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/32f79e86-7f6f-4ece-ab71-a87fe5bdb948.png" alt="PF C">
+        <div class="v-caption"><strong>C</strong>clean hero only (no UI chrome)</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/f3fb0dbe-33ee-4231-bf03-0e49e508b58d.png" alt="PF D">
+        <div class="v-caption"><strong>D</strong>6 jerseys + full UI, first pass</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/0c58a7b0-d6c9-426a-93a4-f1637fdfec8f.png" alt="PF E">
+        <div class="v-caption"><strong>E · current main</strong>layout fixes applied</div>
+      </div>
+      <div class="variation">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/57f1da90-5b8d-48f1-95a6-28c9818a8bba.png" alt="PF F">
+        <div class="v-caption"><strong>F</strong>black-white ball-in-O attempt (skipped)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
