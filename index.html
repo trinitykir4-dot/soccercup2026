@@ -85,6 +85,53 @@
   .note { background: var(--surface); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 6px; font-size: 14px; color: var(--text-dim); margin-top: 20px; }
   .note strong { color: var(--text); }
 
+  /* Tabs */
+  .tab-nav { display: flex; gap: 8px; margin-bottom: 40px; padding: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; width: fit-content; }
+  .tab { background: transparent; color: var(--text-dim); border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: all 0.15s ease; }
+  .tab:hover { color: var(--text); }
+  .tab.is-active { background: var(--accent); color: white; box-shadow: 0 4px 14px rgba(255, 71, 87, 0.25); }
+  .tab .tab-badge { font-size: 10px; padding: 2px 8px; background: rgba(255,255,255,0.2); border-radius: 999px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+  .tab:not(.is-active) .tab-badge { background: var(--accent); color: white; }
+  .tab-panel.is-hidden { display: none; }
+
+  /* v2 panel */
+  .v2-callout { background: linear-gradient(135deg, rgba(34,211,238,0.08), rgba(124,58,237,0.06)); border: 1px solid rgba(34,211,238,0.25); border-radius: 12px; padding: 22px 24px; margin-bottom: 32px; font-size: 15px; color: var(--text-dim); line-height: 1.7; }
+  .v2-callout strong { color: var(--cyan); }
+  .v2-callout em { color: var(--text); font-style: normal; font-weight: 700; }
+
+  .delta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 32px; }
+  .delta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .delta-card.span-2 { grid-column: 1 / -1; }
+  .delta-card .delta-img-wrap { position: relative; }
+  .delta-card img { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+  .delta-card .delta-img-wrap.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--border); }
+  .delta-card .delta-img-wrap.dual figure { margin: 0; position: relative; background: #000; }
+  .delta-card .delta-img-wrap.dual figure img { aspect-ratio: 9/16; }
+  .delta-card .delta-img-wrap.dual figcaption { position: absolute; bottom: 8px; left: 8px; right: 8px; font-size: 10px; padding: 5px 8px; background: rgba(0,0,0,0.78); backdrop-filter: blur(4px); color: white; border-radius: 4px; text-align: center; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+  .delta-card .delta-body { padding: 16px 18px 18px; }
+  .delta-card .delta-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+  .delta-card .delta-head .new-name { font-size: 13px; color: var(--text-dim); }
+  .delta-card .delta-head .new-name strong { color: var(--text); }
+  .delta-card ul { list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.5; }
+  .delta-card ul li { padding: 4px 0; padding-left: 22px; position: relative; color: var(--text-dim); }
+  .delta-card ul li::before { content: ''; position: absolute; left: 6px; top: 12px; width: 6px; height: 6px; border-radius: 50%; }
+  .delta-card ul li.keep { }
+  .delta-card ul li.keep::before { background: var(--emerald); }
+  .delta-card ul li.change::before { background: var(--gold); }
+  .delta-card ul li.remove::before { background: var(--accent); }
+  .delta-card ul li strong { color: var(--text); margin-right: 4px; }
+  .delta-card ul li.keep strong { color: var(--emerald); }
+  .delta-card ul li.change strong { color: var(--gold); }
+  .delta-card ul li.remove strong { color: var(--accent); }
+
+  .name-table { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 32px; }
+
+  .parked-card { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px; margin-bottom: 32px; align-items: start; }
+  .parked-card img { width: 100%; height: auto; display: block; border-radius: 8px; background: #000; }
+  .parked-card .parked-body h3 { font-size: 17px; margin-bottom: 6px; }
+  .parked-card .parked-body p { color: var(--text-dim); font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+  .parked-card .parked-status { display: inline-block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; padding: 4px 10px; background: rgba(245,197,66,0.12); border: 1px solid rgba(245,197,66,0.3); border-radius: 999px; margin-bottom: 10px; }
+
   /* Variations archive styles */
   .variations-intro { color: var(--text-dim); font-size: 15px; max-width: 820px; margin-bottom: 40px; font-style: italic; }
   .variations-brand { margin-bottom: 40px; }
@@ -98,8 +145,8 @@
   .variation .v-caption strong { color: var(--text); display: block; font-size: 12px; margin-bottom: 2px; }
 
   @media (max-width: 900px) {
-    .angle-grid, .four-up { grid-template-columns: 1fr; }
-    .hero-lockup { grid-template-columns: 1fr; }
+    .angle-grid, .four-up, .delta-grid { grid-template-columns: 1fr; }
+    .hero-lockup, .parked-card { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -107,9 +154,9 @@
 <div class="container">
 
 <header>
-  <div class="eyebrow">Internal concept preview · Kick-off follow-up</div>
+  <div class="eyebrow">Internal concept preview · v2 · post-feedback</div>
   <h1>Soccer Cup 2026 — Concept <span>Moodboard</span></h1>
-  <p class="subtitle">Overarching theme <strong style="color:#fff">soccer + USA</strong>, one per brand, with each brand's collectible concept as called out in the kick-off summary: ML card collectible with golden-card mystery, HM penalty shootout, PF jersey collection, SB hero character collecting soccer kit. This moodboard is a rough first pass on the three open questions — (1) cards that don't read as a referee warning, (2) a Golden item that lands richly, (3) differentiation across all four brands — not a proposal, just a starting point to react to.</p>
+  <p class="subtitle">Overarching theme <strong style="color:#fff">soccer + USA</strong>, one per brand. This is the second pass — feedback from 24 Apr is folded in: McLuck glass-box kept, ornate borders simplified, Golden item now ML-only (removed from HM / SB / PF), SpinBlitz palette pulled toward lighter blues, new legal-cleared campaign names, Puzzle Ball parked as fallback. Use the tabs below to compare <em>v1 — initial draft</em> with <em>v2 — current</em>. Still iterative, nothing locked.</p>
   <div class="meta-row">
     <span>Concepts proposed: Thu 30 Apr</span>
     <span>Style freeze: Fri 1 May</span>
@@ -117,6 +164,183 @@
     <span>Legal: no official assets · country colors OK</span>
   </div>
 </header>
+
+<!-- TABS -->
+<div class="tab-nav" role="tablist">
+  <button class="tab is-active" data-target="panel-v2" role="tab">v2 — post-feedback <span class="tab-badge">latest</span></button>
+  <button class="tab" data-target="panel-v1" role="tab">v1 — initial draft</button>
+</div>
+
+<!-- ===== V2 PANEL ===== -->
+<div id="panel-v2" class="tab-panel">
+
+<section>
+  <h2><span class="num">★</span>What changed since v1</h2>
+  <p class="section-lead">Initial feedback came in (24 Apr). Some calls are still preliminary — strategy plans land tomorrow and SpinBlitz direction will firm up then. Below is a tight delta of what's moving in v2.</p>
+
+  <div class="v2-callout">
+    <strong>Edits applied to the visuals:</strong><br>
+    • <em>McLuck cards-in-glass-box</em> — kept; mitigates the warning-card concern.<br>
+    • <em>Green/gold ornate card borders</em> — simplified across all 5 non-golden cards.<br>
+    • <em>Bottom-left ML card</em> — stadium photo replaced with beige silhouette on crimson; black-and-white photographic balls on cards restyled as beige silhouettes.<br>
+    • <em>Golden item</em> is McLuck-only — removed from HM (gold X), SB (gold ball), PF (gold jersey).<br>
+    • <em>SpinBlitz palette</em> — lightened and pulled toward site-blues / cyan, away from PF purple/pink.<br>
+    • <em>SpinBlitz mechanic</em> (eagle-growth vs kit-collection) — both still on the table; final call after strategy lands.<br>
+    • <em>PlayFame jerseys</em> — locker row preferred; 2×3 grid works (3×3 also fine).<br>
+    • <em>Campaign name</em> — "Soccer Cup 2026" did not pass legal. New names below.<br>
+    • <em>Puzzle Ball</em> — parked as fallback; not in this campaign unless May tests outperform.
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">A</span>New campaign names (post-legal)</h2>
+  <p class="section-lead">Legal flagged "Soccer Cup 2026" for undue commercial association with the tournament. Paddy approved <em>The Summer of Soccer</em> for one brand (probably McLuck). The other three pick from the legal-cleared shortlist.</p>
+
+  <div class="diff-matrix name-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Campaign name (suggested)</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #f5c542;"></span>McLuck</td>
+          <td><strong style="color:#fff">The Summer of Soccer</strong></td>
+          <td>Approved by Paddy for one brand · McLuck is the strongest fit (lucky / golden card mechanic anchors here)</td>
+        </tr>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #ef4444;"></span>HelloMillions</td>
+          <td><strong style="color:#fff">Summer Soccer Frenzy</strong></td>
+          <td>Energy + comic pop-art DNA fit "frenzy"</td>
+        </tr>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #7c3aed;"></span>SpinBlitz</td>
+          <td><strong style="color:#fff">SoccerFest</strong></td>
+          <td>Cleaner / shorter — pairs with neon energy and "Blitz"</td>
+        </tr>
+        <tr>
+          <td class="brand-col"><span class="dot" style="background: #ec4899;"></span>PlayFame</td>
+          <td><strong style="color:#fff">Summer SoccerFest</strong></td>
+          <td>Premium feel · longer name has space in PF's UI scale</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-lead" style="font-size: 13px;">Distribution above is a suggestion — happy to swap. All names are from the legal-cleared shortlist (SoccerFest, Summer Soccer Frenzy, Summer SoccerFest, The Summer of Soccer). "2026" intentionally dropped from 3 of 4 to further mitigate risk per legal.</p>
+</section>
+
+<section>
+  <h2><span class="num">B</span>Per-brand changes</h2>
+  <p class="section-lead">Visuals below are <strong style="color:#fff">not accurate mockups</strong> — they're AI drafts. Buttons, timers, the Ultimate Reward panel, and small details on the cards (a stray ball or two, off positioning) will read off on close inspection and will be cleaned up in production. Focus on the <em>overall style</em> and the <em>main collectible idea</em> per brand. Each card lists what was kept, simplified, or removed compared to v1.</p>
+
+  <div class="delta-grid">
+    <!-- McLuck -->
+    <div class="delta-card">
+      <div class="delta-img-wrap">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/111a9cf4-9235-457f-9ed9-46c06eae944f.png" alt="McLuck v2">
+      </div>
+      <div class="delta-body">
+        <div class="delta-head">
+          <span class="brand-badge badge-ml">McLuck</span>
+          <span class="new-name">→ <strong>The Summer of Soccer</strong></span>
+        </div>
+        <ul>
+          <li class="keep"><strong>Kept</strong> 6 cards in glass-cube + Golden trophy card top-center (mitigates the warning-card concern)</li>
+          <li class="change"><strong>Simplified</strong> the green card outlines + ornate gold filigree borders — cleaner, less curled across all 5 non-golden cards</li>
+          <li class="change"><strong>Replaced</strong> the bottom-left stadium photo with a beige silhouette on crimson, matching the other cards</li>
+          <li class="change"><strong>Restyled</strong> the photographic black-and-white soccer balls on cards as beige silhouettes for visual consistency</li>
+          <li class="keep"><strong>Kept</strong> the McLuck palette (gold / emerald / crimson) — direction confirmed</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HelloMillions -->
+    <div class="delta-card">
+      <div class="delta-img-wrap">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/74e705b1-dbdd-4c04-a134-92f4591f1028.png" alt="HelloMillions v2">
+      </div>
+      <div class="delta-body">
+        <div class="delta-head">
+          <span class="brand-badge badge-hm">HelloMillions</span>
+          <span class="new-name">→ <strong>Summer Soccer Frenzy</strong></span>
+        </div>
+        <ul>
+          <li class="keep"><strong>Kept</strong> 6 red X targets inside the goal + adult goalkeeper + pop-art treatment</li>
+          <li class="remove"><strong>Removed</strong> the small Golden X under the keeper's feet (Golden item is McLuck-only)</li>
+          <li class="keep"><strong>Kept</strong> palette — direction confirmed</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SpinBlitz -->
+    <div class="delta-card span-2">
+      <div class="delta-img-wrap dual">
+        <figure>
+          <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/5f072a8b-628b-4b08-9510-b8b9e908ffb2.png" alt="SpinBlitz kit collection">
+          <figcaption>Kit collection</figcaption>
+        </figure>
+        <figure>
+          <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/bd76e8ca-2a51-483a-97ec-c71ff3aec934.png" alt="SpinBlitz eagle growth">
+          <figcaption>Eagle growth</figcaption>
+        </figure>
+      </div>
+      <div class="delta-body">
+        <div class="delta-head">
+          <span class="brand-badge badge-sb">SpinBlitz</span>
+          <span class="new-name">→ <strong>SoccerFest</strong></span>
+        </div>
+        <ul>
+          <li class="change"><strong>Two directions shown</strong> — kit-collection (left) and eagle-growth (right). Both still on the table; lock once strategy plan lands</li>
+          <li class="change"><strong>Lightened</strong> palette on both — shifted away from purple/pink, leaned into lighter site-blues / cyan to separate from PF</li>
+          <li class="remove"><strong>Removed</strong> Golden hero effects on both — Match Ball swapped for a regular ball; the captain eagle's gold halo and shimmer dropped (Golden item is McLuck-only)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PlayFame -->
+    <div class="delta-card">
+      <div class="delta-img-wrap">
+        <img src="https://djrtmqojdjegkpismlfe.supabase.co/storage/v1/object/public/image-generations/ef0ff4a8-2ef8-463c-9b6c-2e841cd759d4/d5823a5d-19a2-4c48-8635-f72b14288a19/api/f37fa07e-bfb5-453f-ace1-8df5dd7633fe.png" alt="PlayFame v2">
+      </div>
+      <div class="delta-body">
+        <div class="delta-head">
+          <span class="brand-badge badge-pf">PlayFame</span>
+          <span class="new-name">→ <strong>Summer SoccerFest</strong></span>
+        </div>
+        <ul>
+          <li class="keep"><strong>Kept</strong> jerseys in the locker · 2×3 grid (3×3 also fine if needed)</li>
+          <li class="remove"><strong>Removed</strong> the Golden Jersey #10 — replaced with a USA-color jersey #10 (Golden item is McLuck-only)</li>
+          <li class="change"><strong>Style TBD</strong> — illustrative vs more realistic jerseys to be decided</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">C</span>Puzzle Ball — parked as fallback</h2>
+  <p class="section-lead">The puzzle-ball idea got positive response but is on hold for this campaign. New mechanic isn't proving out yet — keeping it in pocket as a fallback if May tests outperform.</p>
+
+  <div class="parked-card">
+    <img src="ML%20-%20Soccer%20Collectibles%20Popup%20-%20Concept-%20(1).png" alt="Puzzle Ball concept">
+    <div class="parked-body">
+      <span class="parked-status">● Parked · fallback only</span>
+      <h3>Build the match ball</h3>
+      <p>One golden centre surrounded by panels, assembled across six missions. The collectible <em>is</em> the theme — no translation needed.</p>
+      <p style="font-size:13px; color: var(--text-dim);"><strong style="color: var(--text)">Status:</strong> current plan skips Puzzle for the World Cup since the mechanic isn't fully tested yet. If May results outperform, this is ready to pull off the shelf as a late-add.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+<!-- ===== /V2 PANEL ===== -->
+
+
+<!-- ===== V1 PANEL ===== -->
+<div id="panel-v1" class="tab-panel is-hidden">
 
 <!-- THREE ANGLES -->
 <section>
@@ -403,5 +627,28 @@
 </section>
 
 </div>
+<!-- ===== /V1 PANEL ===== -->
+
+</div><!-- /container -->
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.tab');
+    var panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-target');
+        tabs.forEach(function (t) { t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        panels.forEach(function (p) {
+          if (p.id === target) { p.classList.remove('is-hidden'); }
+          else { p.classList.add('is-hidden'); }
+        });
+        // scroll to top of container on tab change
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
